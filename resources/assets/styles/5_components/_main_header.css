@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2017 by Proweb https://proweb.com - All rights reserved
+ *
+ * This file can not be copied and/or distributed without the express
+ * permission of Proweb
+ *
+ */
+
+/* Main header
+   ========================================================================== */
+.main-header {
+
+}
+
+
+/* Logo
+   ========================================================================== */
+.logo {
+  font-family: var(--font-family--title);
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @mixin media--md {
+    padding: 15px 0;
+    text-align: left;
+  }
+
+  &__link {
+    color: #9D9FA2;
+    text-decoration: none;
+  }
+
+  &__highlight {
+    color: #004C80;
+  }
+}

@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2017 by Proweb https://proweb.com - All rights reserved
+ *
+ * This file can not be copied and/or distributed without the express
+ * permission of Proweb
+ *
+ */
+
+@custom-media --breakpoint--xs (max-width: 575px);
+@custom-media --breakpoint--sm (min-width: 576px);
+@custom-media --breakpoint--md (min-width: 768px);
+@custom-media --breakpoint--lg (min-width: 992px);
+@custom-media --breakpoint--xl (min-width: 1200px);
+
+/* With Min... */
+@define-mixin media--xs {
+  @media screen and (--breakpoint--xs) {
+    @mixin-content;
+  }
+}
+
+@define-mixin media--sm {
+  @media screen and (--breakpoint--sm) {
+    @mixin-content;
+  }
+}
+
+@define-mixin media--md {
+  @media screen and (--breakpoint--md) {
+    @mixin-content;
+  }
+}
+
+@define-mixin media--lg {
+  @media screen and (--breakpoint--lg) {
+    @mixin-content;
+  }
+}
+
+@define-mixin media--xl {
+  @media screen and (--breakpoint--xl) {
+    @mixin-content;
+  }
+}

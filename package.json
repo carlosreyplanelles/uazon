@@ -1,0 +1,46 @@
+{
+"name": "proweb",
+  "version": "1.0.0",
+  "description": "Proweb UAZON E-commerce",
+  "main": "index.js",
+  "author": "Elisabet Padilla",
+  "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.17",
+        "bootstrap-sass": "^3.3.7",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^1.0",
+        "lodash": "^4.17.4",
+"browser-sync": "^2.23.5",
+        "vue": "^2.5.7"
+    },
+"dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-image": "^4.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-import": "^11.0.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-simple-vars": "^4.1.0",
+    "run-sequence": "^2.2.1"
+  },
+}

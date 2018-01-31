@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) 2017 by Proweb https://proweb.com - All rights reserved
+ *
+ * This file can not be copied and/or distributed without the express
+ * permission of Proweb
+ *
+ */
+
+:root {
+
+    /* Palette
+       ========================================================================== */
+    --color-default: #2C5169;
+    --color-default--lighter: #CCD0D5;
+    --color-default--dark: #002E4D;
+
+    /* Texts
+       ========================================================================== */
+    --color-text: var(--color-default);
+    --color-title: var(--color-default--dark);
+
+    /* Links
+       ========================================================================== */
+    --color-link: #26C688;
+    --color-link--hover: var(--color-default--dark);
+
+}

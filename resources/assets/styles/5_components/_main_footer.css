@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) 2017 by Proweb https://proweb.com - All rights reserved
+ *
+ * This file can not be copied and/or distributed without the express
+ * permission of Proweb
+ *
+ */
+
+/* Main footer
+   ========================================================================== */
+.main-footer {
+  background: var(--color-default--dark);
+  color: #ffffff;
+  font-size: 14px;
+  padding: 30px 0;
+}
+
+.copyright {
+  margin-top: 0;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+
+  }
+
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .copyright {
+    margin-bottom: 0;
+  }
+
+  .footer-links {
+    text-align: right;
+
+    &__item {
+      display: inline-block;
+      margin: 0 0 0 10px;
+    }
+  }
+}

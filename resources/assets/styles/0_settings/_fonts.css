@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2017 by Proweb https://proweb.com - All rights reserved
+ *
+ * This file can not be copied and/or distributed without the express
+ * permission of Proweb
+ *
+ */
+
+:root {
+
+    /* Font family
+       ========================================================================== */
+    --font-family--text: 'Roboto', sans-serif;
+    --font-family--title: 'Days One', sans-serif;
+
+    /* Font weight
+       ========================================================================== */
+    --font-weight--light: 300;
+    --font-weight--regular: 400;
+    --font-weight--medium: 500;
+    --font-weight--semi-bold: 600;
+    --font-weight--bold: 700;
+
+}
