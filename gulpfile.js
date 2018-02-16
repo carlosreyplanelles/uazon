@@ -41,14 +41,14 @@ gulp.task('watch', function() {
     browserSync.init({
          notify: false,
          proxy: {
-             target: 'http://proweb.local',
+             target: 'http://uazon-local.com',
              proxyReq: [
                  function (proxyRes, req, res) {
 
                  }
              ]
          },
-         browser: ["google chrome"]
+         browser: ["firefox"]
     });
 
     // Watch for styles

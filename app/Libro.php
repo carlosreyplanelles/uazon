@@ -9,7 +9,7 @@ class Libro extends Model
     protected $table='libros';
 
     public function autores() {
-        return $this->belongsToMany('App\Autor','libros_autores','libro_id','autor_id')->withPivot('fecha');
+        return $this->belongsToMany('App\Autor','libros_autores','fk_autores')->withPivot('fecha');
     }
 
     public function fotos()

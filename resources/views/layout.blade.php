@@ -34,6 +34,8 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpg">
+    <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/review.css') }}">
 </head>
 <body>
 
@@ -45,13 +47,14 @@
 
     @yield('content')
 
-    <?php //include_once 'reviews/index.php' ?>
     @stack('list')
 </main>
 
 <!-- Main Footer -->
 @include('common.footer')
 
+<script type="text/javascript" src="{{asset('assets/scripts/scripts-third.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/scripts/scripts.js')}}"></script>
 </body>
 </html>
 

@@ -17,7 +17,3 @@ Route::get('/', function () {
 
 
 Route::get('/reviews', 'ReviewController@show')->name('reviews_get');
-
-
-Route::post('/form','ReviewController@store');
-

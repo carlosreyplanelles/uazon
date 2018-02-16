@@ -16,10 +16,4 @@ class ReviewController extends Controller
 
         return view('review.content', ['seo_title'=>'Review']);
     }
-
-    public function store(Request $request){
-        $input = $request->except('_token');
-        print_r($input);
-
-    }
 }
