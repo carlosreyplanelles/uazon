@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Libro;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+Route::get('libros', 'BooksController@index');
+Route::get('libros/{id}', 'BooksController@show');
+Route::post('libros', 'BooksController@store');
+//Route::put('libros/{id}', 'BooksController@update');
+
+
