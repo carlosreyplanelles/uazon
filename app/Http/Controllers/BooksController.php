@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Libro;
+use App\Comentarios;
 use Carbon\Carbon;
 
 class booksController extends Controller
@@ -14,10 +15,15 @@ class booksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
+    }
+
+    public function libros(){
         return Libro::all();
     }
 
-
+    public function libro($id){
+        return Libro::find($id);
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -53,7 +59,7 @@ class booksController extends Controller
      */
     public function show($id)
     {
-        return Libro::find($id);
+
     }
 
     /**
@@ -62,31 +68,33 @@ class booksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /*public function update($request, $id)
+    public function update(Request $request)
     {
-        if(!$id){
-            throw new HttpException(400, "Invalid id");
-        }
 
-        $book= Libro::find($id);
+        $book = Libro::find($request->id);
         $mytime = Carbon::now();
 
-        $book->isbn=$request->input('isbn');
-        $book->voto=$request->input('voto');
-        $book->num_voto=$request->input('num_voto');
-        $book->n_pags=$request->input('n_pags');
-        $book->precio=$request->input('precio');
-        $book->titulo=$request->input('titulo');
-        $book->editorial=$request->input('editorial');
-        $book->atributos_extra=$request->input('atributos_extra');
-        $book->updated_at= $mytime;
+        $book->isbn = $request->input('isbn');
+        $book->voto = $request->input('voto');
+        $book->num_voto = $request->input('num_voto');
+        $book->n_pags = $request->input('n_pags');
+        $book->precio = $request->input('precio');
+        $book->titulo = $request->input('titulo');
+        $book->editorial = $request->input('editorial');
+        $book->atributos_extra = $request->input('atributos_extra');
+        $book->updated_at = $mytime;
 
-        if($book->save()){
+        if ($book->save()) {
             return $book;
         }
 
         throw new HttpException(400, "Invalid data");
+    }
 
-    }*/
-
+    public function comments($id){
+        $comments = Comentarios::where('fk_libros', $id)->get();
+        foreach ($comments as $c){
+            echo $c->descripcion;
+        }
+    }
 }
