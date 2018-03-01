@@ -18,9 +18,10 @@ use App\Libro;
 //    return $request->user();
 //});
 
-Route::get('libros', 'BooksController@index');
-Route::get('libros/{id}', 'BooksController@show');
+Route::get('libros', 'BooksController@libros');
+Route::get('libros/{id}', 'BooksController@libro');
+route::get('libros/{id}/comments', 'BooksController@comments');
 Route::post('libros', 'BooksController@store');
-//Route::put('libros/{id}', 'BooksController@update');
+Route::put('libros', 'BooksController@update');
 
 

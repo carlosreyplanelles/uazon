@@ -16,4 +16,9 @@ class Libro extends Model
     {
         return $this->hasMany('App\Foto','id','libro_id');
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comentarios','id','fk_libros');
+    }
 }
