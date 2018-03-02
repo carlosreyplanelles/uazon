@@ -24,7 +24,11 @@ class booksController extends Controller
     }
 
     public function libro($id){
-        return Libro::find($id);
+        $libro=Libro::find($id);
+        if ($libro==null){
+            abort(404, 'error 404: recurso no encontrado.');
+        }
+        return $libro;
     }
     /**
      * Store a newly created resource in storage.
@@ -174,7 +178,7 @@ class booksController extends Controller
     }
     public function delete($id){
         $libro=Libro::find($id);
-        if (Libro::find($id)==null){
+        if ($libro==null){
             abort(404, 'error 404: recurso no encontrado.');
         }
         $libro->delete();
