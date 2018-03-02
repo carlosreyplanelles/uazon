@@ -172,4 +172,12 @@ class booksController extends Controller
             echo $c->descripcion;
         }
     }
+    public function delete($id){
+        $libro=Libro::find($id);
+        if (Libro::find($id)==null){
+            abort(404, 'error 404: recurso no encontrado.');
+        }
+        $libro->delete();
+
+    }
 }

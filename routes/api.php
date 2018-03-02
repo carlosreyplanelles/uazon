@@ -23,5 +23,6 @@ Route::get('libros/{id}', 'BooksController@libro');
 route::get('libros/{id}/comments', 'BooksController@comments');
 Route::post('libros', 'BooksController@store');
 Route::put('libros', 'BooksController@update');
+Route::delete('libros/{id}', 'BooksController@delete');
 
 
