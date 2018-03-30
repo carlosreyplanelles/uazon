@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 
 Route::get('/reviews', 'ReviewController@show')->name('reviews_get');
+Route::get('/books/{id}', 'BooksController@show')->name('book_Detail');
+route::get('/books', 'BooksController@index')->name('books');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

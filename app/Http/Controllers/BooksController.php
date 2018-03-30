@@ -16,7 +16,9 @@ class booksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return Libro::all();
+        $data = Libro::all();
+        $seoTitle='Listado de libros';
+        return view('/books/list.content', ['seo_title'=>$seoTitle, 'libros'=>$data] );
     }
 
     public function libros(){
@@ -67,7 +69,6 @@ class booksController extends Controller
             exit();
         }
 
-        //$mytime = Carbon::now();
         $book= new Libro;
         $book->isbn=$request->input('isbn');
         $book->n_pags=$request->input('n_pags');
@@ -77,7 +78,6 @@ class booksController extends Controller
         $book->atributos_extra=$request->input('atributos_extra');
         $book->voto=0;
         $book->num_voto=0;
-        //$book->created_at= $mytime;
 
         if($book->save()){
             return $book;
@@ -93,7 +93,8 @@ class booksController extends Controller
      */
     public function show($id)
     {
-        return libro($id);
+        $data = Libro::find($id);
+        return view('/books/detail.content', ['seo_title'=>$data->title, 'data'=>$data] );
     }
 
     /**
