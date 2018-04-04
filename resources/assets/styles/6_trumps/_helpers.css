@@ -16,9 +16,31 @@
     text-align: right;
 }
 
+.text-align--left {
+    text-align: left;
+}
+
 
 /* Border
    ========================================================================== */
 .no-border--left {
     border-left: hidden;
+}
+
+/* Image
+   ========================================================================== */
+.image-align--center{
+    margin: auto;
+    display: block;
+}
+
+/* input
+   ========================================================================== */
+
+.input-align--center{
+    margin:auto
+}
+
+.input-align--padding{
+    padding:1rem;
 }
