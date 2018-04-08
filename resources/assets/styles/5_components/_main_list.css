@@ -1,0 +1,10 @@
+.list-element__background{
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background: #DDDDDD;
+    text-align: center;
+}
+
+p{
+    margin: auto;
+}

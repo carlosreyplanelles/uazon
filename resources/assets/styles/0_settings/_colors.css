@@ -24,4 +24,8 @@
     --color-link: #3E7EB0;
     --color-link--hover: var(--color-default--dark);
 
+    /* Backgrounds
+       ========================================================================== */
+    --navigation-containers--background: #777696;
+
 }

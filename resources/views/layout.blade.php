@@ -36,6 +36,8 @@
     <meta property="og:image:type" content="image/jpg">
     <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/review.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/list.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/navigation.css') }}">
 </head>
 <body>
 

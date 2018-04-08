@@ -7,7 +7,7 @@
     {{-- @include('/books/detail.header')--}}
 
     <!-- Review Body -->
-        <div class="reviews-body">
+        <div>
             @include('/books/list.data')
             {{-- @include('/books/detail.aside') --}}
         </div>

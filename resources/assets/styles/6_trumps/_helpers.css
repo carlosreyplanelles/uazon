@@ -38,9 +38,21 @@
    ========================================================================== */
 
 .input-align--center{
-    margin:auto
+    margin : auto
 }
 
 .input-align--padding{
-    padding:1rem;
+    padding : 1rem;
 }
+
+/* Containers
+   ========================================================================== */
+.container-size--expand {
+    width : 100%;
+    display:inline-block;
+    align-items: center;
+
+
+}
+
+

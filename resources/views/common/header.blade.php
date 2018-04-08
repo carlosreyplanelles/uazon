@@ -9,8 +9,7 @@
 
     <!-- Header tools -->
     <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Registrarse</a></li>
+        <li><a href="{{ route('login') }}">Login</a></li>
         <li><a href="shopping-cart.html">Carrito de la compra</a></li>
     </ul>
 
