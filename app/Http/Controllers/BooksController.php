@@ -93,8 +93,8 @@ class booksController extends Controller
      */
     public function show($id)
     {
-        $data = Libro::find($id);
-        return view('/books/detail.content', ['seo_title'=>$data->title, 'data'=>$data] );
+        $book = Libro::find($id);
+        return view('/books/detail.content', ['seo_title'=>$book->title, 'book'=>$book] );
     }
 
     /**

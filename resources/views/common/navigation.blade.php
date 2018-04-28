@@ -1,9 +1,11 @@
 <!-- Main navigation -->
-<div class="container-size--expand text-align--center navigation__element--padding">
-        <a href="books.html">Libros</a>
-        <a href="authors.html">Autores</a>
-        <a href="top-reading.html">Lo más leído</a>
-        <a href="reviews.html">Críticas de libros</a>
-        <a href="contact.html">Contacto</a>
+<div>
+        <ul>
+        <li><a href="books.html">Libros</a></li>
+        <li><a href="authors.html">Autores</a></li>
+        <li><a href="top-reading.html">Lo más leído</a></li>
+        <li><a href="reviews.html">Críticas de libros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        </ul>
 
 </div>

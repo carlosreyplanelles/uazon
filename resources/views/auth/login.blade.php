@@ -8,6 +8,7 @@
                 <div class="panel-body text-align--center">
                     <form  method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
+
                         <img class="image-align--center" src="{{asset('assets/images/favicon180x180.png')}}" alt="Logo"  width="180" height="180">
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
@@ -55,6 +56,11 @@
                                 <button type="submit" class="btn btn--lg btn-primary">
                                     Login
                                 </button>
+                            </div>
+                            <div class="input-align--center">
+                                <a href="{{route('facebookCall')}}"  class="btn btn--lg btn-primary">
+                                    Facebook Login
+                                </a>
                             </div>
                         </div>
                         <div >

@@ -20,6 +20,10 @@
     text-align: left;
 }
 
+.text-float--right{
+    float: right;
+    position:relative;
+}
 
 /* Border
    ========================================================================== */
@@ -44,15 +48,22 @@
 .input-align--padding{
     padding : 1rem;
 }
-
+.input-position-bottom{
+    position: initial;
+}
 /* Containers
    ========================================================================== */
 .container-size--expand {
     width : 100%;
     display:inline-block;
     align-items: center;
-
-
 }
+
+.container__background{
+    background: #DDDDDD;
+}
+
+
+
 
 
