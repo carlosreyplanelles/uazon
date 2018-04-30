@@ -10,17 +10,14 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 class CartController extends Controller
 {
     public function add(Request $request){
-        $book = $libro=Libro::find($request->bookId);
-        Cart::add($book->isbn, $book, 1, $book->precio)->associate('Libro');
+        $book = Libro::find($request->bookId);
+        Cart::add($book->id,$book->titulo,1,$book->precio);
         return redirect('/books');
     }
 
     public function show(){
-        $cart = Cart::Content();
-        foreach($cart as $product){
-            var_dump($product->name);
-        }
-        //return view('/cart.content', ['seo_title'=>'Carrito', 'cart'=>Cart::content()]);
+        $pedido = Cart::Content();
+        return view('/cart.content', ['seo_title'=>'Carrito', 'pedido'=>$pedido]);
     }
 
 }

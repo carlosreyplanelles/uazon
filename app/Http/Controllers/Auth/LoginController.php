@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Facebook\Facebook;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use App\Libro;
+use App\Http\Controllers\UserController;
+
 
 class LoginController extends Controller
 {
@@ -28,15 +32,16 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/books';
-
+    public $userController;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(UserController $userController)
     {
         $this->middleware('guest')->except('logout');
+        $this->UserController = $userController;
     }
 
     public function logout(Request $request)
@@ -57,6 +62,7 @@ class LoginController extends Controller
 
     public function loginFacebook(){
         $fb = new Facebook(['app_id'=>'226690111434793','app_secret'=>'8970b3f9310c8fede7241ffe9c34096f','default_graph_version'=>'']);
+        $this->userController = new UserController();
         $helper = $fb->getRedirectLoginHelper();
         if (isset($_GET['state'])) {
             $helper->getPersistentDataHandler()->set('state', $_GET['state']);
@@ -75,6 +81,20 @@ class LoginController extends Controller
         $fb->setDefaultAccessToken($accessToken);
         $response = $fb->get('/me?fields=id,first_name,last_name,picture,email');
         $info = $response->getGraphUser();
-        return $info;
+        $user =  $this->userController->findByEmail($info->getEmail());
+        if($user === null){
+            $user = [
+                'name' => $info->getFirstName()." ".$info->getLastName(),
+                'email' => $info->getEmail(),
+                'password'=> 'facebookHandled'
+            ];
+            try{
+                $user=$this->userController->createUser($user);
+            } catch(\Exception $e){}
+        }
+        \Auth::login($user, true);
+        return redirect()->route('books')->with('Success logging in with Facebook');
+
+
     }
 }

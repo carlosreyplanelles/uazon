@@ -36,3 +36,9 @@ Route::post('profile/{userid}', 'profileController@update')->name('updateProfile
 //Facebook
 route::get('facebook', 'Auth\LoginController@facebook')->name('facebookCall');
 route::get('login/facebook', 'Auth\LoginController@loginFacebook')->name('facebookLogin');
+
+//Checkout
+route::get('Checkout', 'orderController@checkout')->name('checkout');
+
+//Stripe
+route::post('stripePayment', 'orderController@stripePayment')->name('stripe');
