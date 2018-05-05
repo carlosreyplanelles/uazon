@@ -16,9 +16,54 @@
     text-align: right;
 }
 
+.text-align--left {
+    text-align: left;
+}
+
+.text-float--right{
+    float: right;
+    position:relative;
+}
 
 /* Border
    ========================================================================== */
 .no-border--left {
     border-left: hidden;
 }
+
+/* Image
+   ========================================================================== */
+.image-align--center{
+    margin: auto;
+    display: block;
+}
+
+/* input
+   ========================================================================== */
+
+.input-align--center{
+    margin : auto
+}
+
+.input-align--padding{
+    padding : 1rem;
+}
+.input-position-bottom{
+    position: initial;
+}
+/* Containers
+   ========================================================================== */
+.container-size--expand {
+    width : 100%;
+    display:inline-block;
+    align-items: center;
+}
+
+.container__background{
+    background: #DDDDDD;
+}
+
+
+
+
+

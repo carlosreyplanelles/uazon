@@ -24,12 +24,13 @@ var pxToRemConf = {
 // Files configuration
 var publicAssets = 'public/assets',
     sourceAssets = 'resources/assets';
+    uploadsAssets = 'public/uploads';
 
 
 // Default
 // --------------------------------------------------------------------------------------------
 gulp.task('default', function() {
-    runSequence(['images', 'fonts', 'styles', 'scripts-third', 'scripts']);
+    runSequence(['images', 'fonts', 'styles', 'scripts-third', 'scripts','uploads']);
 });
 
 
@@ -87,7 +88,13 @@ gulp.task('images', function() {
     return  gulp.src(sourceAssets + '/images/**/*')
                 .pipe(image())
                 .pipe(gulp.dest(publicAssets + '/images'));
+
 });
+gulp.task('uploads', function(){
+    gulp.src(uploadsAssets + '/images/**/*')
+        .pipe(image())
+        .pipe(gulp.dest(publicAssets + '/images/uploads'));
+})
 
 
 // Javascript third party

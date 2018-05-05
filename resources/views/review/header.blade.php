@@ -4,7 +4,7 @@
     <div class="reviews-header__body reviews-header__body--with-image">
 
         <!-- Imagen de la portada -->
-        <img class="reviews-header__cover" src="../assets/uploads/images/books/origen-dan-brown.png" alt="Tom Hanks en una escena del rodaje de Inferno">
+        <img class="reviews-header__cover" src="../public/images/books/origen-dan-brown.png" alt="Tom Hanks en una escena del rodaje de Inferno">
 
         <!-- Título e información -->
         <h1 class="reviews-header__title">Origen</h1>

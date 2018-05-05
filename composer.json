@@ -8,9 +8,14 @@
         "php": ">=7.0.0",
         "barryvdh/laravel-ide-helper": "^2.4",
         "doctrine/dbal": "^2.6",
+        "facebook/graph-sdk": "^5.6",
         "fideloper/proxy": "~3.3",
+        "gloudemans/shoppingcart": "^2.5",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "nesbot/carbon": "^1.22",
+        "stripe/stripe-php": "^6.6",
+        "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
