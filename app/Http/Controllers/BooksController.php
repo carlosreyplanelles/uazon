@@ -8,7 +8,7 @@ use App\Libro;
 use App\Comentarios;
 use Carbon\Carbon;
 
-class booksController extends Controller
+class BooksController extends Controller
 {
     /**
      * Display a listing of the resource.

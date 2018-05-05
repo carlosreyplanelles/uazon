@@ -94,7 +94,6 @@ class LoginController extends Controller
         }
         \Auth::login($user, true);
         return redirect()->route('books')->with('Success logging in with Facebook');
-
-
     }
+
 }
