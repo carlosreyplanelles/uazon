@@ -21,4 +21,8 @@ class Libro extends Model
     {
         return $this->hasMany('App\Comentarios','id','fk_libros');
     }
+
+    public function libros_pedidos(){
+        return $this->belongsToMany(\App\Libros_pedidos::class, 'libros_pedidos', 'fk_libros');
+    }
 }

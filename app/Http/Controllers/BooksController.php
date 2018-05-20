@@ -107,7 +107,7 @@ class BooksController extends Controller
     {
 
         $rules= [
-            'isbn' => 'integer|digits:9',
+            'isbn' => 'required|integer|digits:9',
             'n_pags' => 'integer|min:1',
             'precio' => 'numeric|min:1',
             'titulo' => 'string|max:255',

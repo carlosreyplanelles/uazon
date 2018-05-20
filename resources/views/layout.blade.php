@@ -13,16 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/images/favicon16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="../assets/images/favicon32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../assets/images/favicon96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="../assets/images/favicon128x128.png" sizes="128x128">
-    <link rel="icon" type="image/png" href="../assets/images/favicon196x196.png" sizes="196x196">
-
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon16x16.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon32x32.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon96x96.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon128x128.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon196x196.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('/images/favicon120x120.png') }}">
-    <link rel="apple-touch-icon" href="../assets/images/favicon180x180.png" sizes="180x180">
-    <link rel="apple-touch-icon" href="../assets/images/favicon152x152.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="../assets/images/favicon167x167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon180x180.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon152x152.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/images/favicon167x167.png') }}">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -39,6 +38,7 @@
     <link rel="stylesheet" href="{{ asset('assets/styles/list.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/navigation.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/detail.css') }}">
+    <link rel="stylesheet" href{{asset('assets/styles/commonHeader.css')}}
 
 </head>
 <body>
