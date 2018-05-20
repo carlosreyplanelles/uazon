@@ -1,13 +1,6 @@
 <!-- Main header
      ------------------------------------------------------------------------------ -->
-.header-tools {
-float: right;
-margin: 0;
-}
 
-.header-tools__item {
-display: inline-block;
-}
 <header>
     <div class="container">
         <div class="row">

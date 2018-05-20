@@ -12,7 +12,7 @@
                         {{ csrf_field() }}
                         <img class="image-align--center" src="{{asset('assets/images/favicon180x180.png')}}" alt="Logo"  width="180" height="180">
                         <div class="panel-heading register__subtitle">Register</div>
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} input-align--center">
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} align--center">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div>
@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="input-align--center input-align--padding">
+                            <div class="align--center input-align--padding">
                                 <button type="submit" class="btn btn-primary btn--lg">
                                     Register
                                 </button>

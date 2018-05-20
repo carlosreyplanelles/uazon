@@ -41,9 +41,7 @@
 /* input
    ========================================================================== */
 
-.input-align--center{
-    margin : auto
-}
+
 
 .input-align--padding{
     padding : 1rem;
@@ -61,6 +59,12 @@
 
 .container__background{
     background: #DDDDDD;
+}
+
+/* Generic
+   ========================================================================== */
+.align--center{
+    margin : auto
 }
 
 

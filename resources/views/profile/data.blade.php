@@ -1,45 +1,63 @@
 <!-- Content -->
 <div class="container">
     <label>PERFIL</label>
-    <form method="post" action="{{route('updateProfile', $user->id)}}">
+
+    <form class="row input-align--padding" method="post" action="{{route('updateProfile', $user->id)}}">
         {{ csrf_field() }}
-
-        <label>
-            Nombre:
-            <input name = "name"  type = "text" value="{{$user->name}}">
-        </label>
-        <label>
-            Dirección:
-            <input name = "address" type = "text" value="{{$user->address}}">
-        </label>
-        <label>
-            Nueva Contraseña:
-            <input name = "newPswd" type = "password">
-        </label>
-
-        <label>
-            Vuelve a introductir tu nuevo password:
-            <input name = "newPswdconfirm"  type = "password" >
-        </label>
-        <label>Introduce tu password actual para confirmar la modificación:</label>
-        <label>
-            Password:
-            <input name = "pswd" type = "password">
-        </label>
-        <button type="submit">Actualizar</button>
-    </form>
-    <label>PEDIDOS</label>
-    @foreach($pedidos as $pedido)
-        <div class="row profile-predidos__pedido">
-            {{$pedido->total}}
-        @foreach ($lineas[$pedido->id] as $linea)
-            <div class="profile-predidos__line">
-                {{$libros[$linea->fk_libros]}}
+        <div class="container list-element__background">
+            <div class="row input-align--padding">
+                <label class="col-md-6 text-align--right"> Nombre:</label>
+                <input class ="col-md-4" name = "name"  type = "text" value="{{$user->name}}">
             </div>
-        @endforeach
+
+            <div class = "row input-align--padding">
+                <label class="col-md-6 text-align--right"> Dirección:</label>
+                <input class="col-md-4" name = "address" type = "text" value="{{$user->address}}">
+            </div>
+
+            <div class = "row input-align--padding">
+                <label class="col-md-6 text-align--right"> Nueva Contraseña:</label>
+                <input class="col-md-4" name = "newPswd" type = "password">
+            </div>
+
+            <div class="row input-align--padding">
+                <label class="col-md-6 text-align--right" >
+                    Vuelve a introductir tu nuevo password:
+                </label>
+                <input class="col-md-4" name = "newPswdconfirm"  type = "password" >
+            </div>
+
+            <div class="row input-align--padding">
+                <label class="col-md-6 text-align--right">Introduce tu password actual para confirmar la modificación:</label>
+                <input class="col-md-4" name = "pswd" type = "password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn--lg btn-primary ">Actualizar</button>
+    </form >
+
+    <label>PEDIDOS</label>
+    <div class ="container">
+    @foreach($pedidos as $pedido)
+        <div class="row list-element__background">
+            <label>{{$pedido->created_at}}</label>-
+            @if($pedido->pagado == true)
+                <label>Pagado</label>
+            @else
+                <label>Pendiente</label>
+            @endif
+            <div class ="container">
+                @foreach ($lineas[$pedido->id] as $linea)
+                    <div class="row ">
+                        <picture>
+                            <img class="input-align--padding" src="{{asset('assets/images/uploads/books/origen-dan-brown.png')}}" width="120" height="120">
+                        </picture>
+                        <label class="col-md-4 align--center">{{$libros[$linea->fk_libros]}}</label>
+                        <label class="col-md-1 align--center">{{$linea ->cantidad}}</label>
+                        <label class="col-md-1 align--center">{{$linea->precio}}</label>
+                    </div>
+                @endforeach
+            </div>
         </div>
     @endforeach
-
-
-
+    </div>
 </div>

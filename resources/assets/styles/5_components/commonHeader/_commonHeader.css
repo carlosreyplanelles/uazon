@@ -1,0 +1,8 @@
+.header-tools {
+    float: right;
+    margin: 0;
+}
+
+.header-tools__item {
+    display: inline-block;
+}

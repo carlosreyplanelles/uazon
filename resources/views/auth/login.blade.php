@@ -13,7 +13,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-                            <div class="input-align--center">
+                            <div class="align--center">
                                 <input  id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -27,7 +27,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
-                            <div class="input-align--center">
+                            <div class="align--center">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="input-align--center">
+                            <div class="align--center">
                                 <div class="checkbox">
                                     <label>
                                         <input class="components--padding" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
@@ -52,12 +52,12 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="input-align--center">
+                            <div class="align--center">
                                 <button type="submit" class="btn btn--lg btn-primary">
                                     Login
                                 </button>
                             </div>
-                            <div class="input-align--center">
+                            <div class="align--center">
                                 <a href="{{route('facebookCall')}}"  class="btn btn--lg btn-primary">
                                     Facebook Login
                                 </a>
