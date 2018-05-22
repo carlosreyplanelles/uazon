@@ -2,13 +2,16 @@
 <div class="container">
     @if(Auth::check())
         @foreach($pedido as $item)
+            <div class="container container__background">
                 <div class="row">
-                    {{$item->name}}
-                    {{$item->qty}}
-                    {{$item->price}}
+                    <label class="col-md-4 text-align--center">{{$item->name}}</label>
+                    <label class="col-md-4 text-align--center">{{$item->qty}}</label>
+                    <label class="col-md-4 text-align--center">{{$item->price}}€</label>
                 </div>
+            </div>
+
         @endforeach
-            <a href="{{route('checkout')}}"  class="btn btn-primary">
+            <a href="{{route('checkout')}}"  class="btn btn-primary btn--lg text-align--center">
                 Checkout
             </a>
         @else

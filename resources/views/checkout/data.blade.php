@@ -1,14 +1,17 @@
 <!-- Content -->
 <div class="container">
         @foreach($order as $item)
+            <div class="container container__background">
                 <div class="row">
-                    {{$item->name}}
-                    {{$item->qty}}
-                    {{$item->price}}
+                    <label class="col-md-2">{{$item->name}}</label>
+                    <label class="col-md-1">{{$item->qty}}</label>
+                    <label class="col-md-2">{{$item->price}}€</label>
                 </div>
+            </div>
+
         @endforeach
-            <div>Subtotal: {{$subtotal}}</div>
-            <div>Total: {{$total}}</div>
+            <div>Subtotal: round({{$subtotal}})</div>
+            <div>Total: round({{$total}})</div>
             <label for="card-element">
                 Credit or debit card
             </label>

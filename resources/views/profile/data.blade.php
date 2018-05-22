@@ -6,29 +6,29 @@
         {{ csrf_field() }}
         <div class="container list-element__background">
             <div class="row input-align--padding">
-                <label class="col-md-6 text-align--right"> Nombre:</label>
+                <label class="col-md-6 align--right"> Nombre:</label>
                 <input class ="col-md-4" name = "name"  type = "text" value="{{$user->name}}">
             </div>
 
             <div class = "row input-align--padding">
-                <label class="col-md-6 text-align--right"> Dirección:</label>
+                <label class="col-md-6 align--right"> Dirección:</label>
                 <input class="col-md-4" name = "address" type = "text" value="{{$user->address}}">
             </div>
 
             <div class = "row input-align--padding">
-                <label class="col-md-6 text-align--right"> Nueva Contraseña:</label>
+                <label class="col-md-6 align--right"> Nueva Contraseña:</label>
                 <input class="col-md-4" name = "newPswd" type = "password">
             </div>
 
             <div class="row input-align--padding">
-                <label class="col-md-6 text-align--right" >
+                <label class="col-md-6 align--right" >
                     Vuelve a introductir tu nuevo password:
                 </label>
                 <input class="col-md-4" name = "newPswdconfirm"  type = "password" >
             </div>
 
             <div class="row input-align--padding">
-                <label class="col-md-6 text-align--right">Introduce tu password actual para confirmar la modificación:</label>
+                <label class="col-md-6 align--right">Introduce tu password actual para confirmar la modificación:</label>
                 <input class="col-md-4" name = "pswd" type = "password">
             </div>
         </div>
@@ -47,7 +47,7 @@
             @endif
             <div class ="container">
                 @foreach ($lineas[$pedido->id] as $linea)
-                    <div class="row ">
+                    <div class="row list-element--border">
                         <picture>
                             <img class="input-align--padding" src="{{asset('assets/images/uploads/books/origen-dan-brown.png')}}" width="120" height="120">
                         </picture>
@@ -57,6 +57,7 @@
                     </div>
                 @endforeach
             </div>
+            <label class="align--right">Total: {{$pedido->total}}</label>
         </div>
     @endforeach
     </div>

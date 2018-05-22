@@ -17,9 +17,9 @@
 <!-- Main navigation -->
 <nav class="navigation">
         <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link navigation__link--active" href="books.html">Libros</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--active" href="{{route('books')}}">Libros</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="authors.html">Autores</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="top-reading.html">Lo más leído</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="{{route('books')}}")>Lo más leído</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="reviews.html">Críticas de libros</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="contact.html">Contacto</a></li>
         </ul>
