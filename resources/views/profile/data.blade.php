@@ -36,15 +36,32 @@
     </form >
 
     <label>PEDIDOS</label>
+    PAGADOS
     <div class ="container">
-    @foreach($pedidos as $pedido)
+        @foreach($pedidosPagados as $pedido)
+            <div class="row list-element__background">
+                <label>{{$pedido->created_at}}</label>
+                <div class ="container">
+                    @foreach ($lineas[$pedido->id] as $linea)
+                        <div class="row list-element--border">
+                            <picture>
+                                <img class="input-align--padding" src="{{asset('assets/images/uploads/books/origen-dan-brown.png')}}" width="120" height="120">
+                            </picture>
+                            <label class="col-md-4 align--center">{{$libros[$linea->fk_libros]}}</label>
+                            <label class="col-md-1 align--center">{{$linea ->cantidad}}</label>
+                            <label class="col-md-1 align--center">{{$linea->precio}}</label>
+                        </div>
+                    @endforeach
+                </div>
+                <label class="align--right">Total: {{$pedido->total}}</label>
+            </div>
+        @endforeach
+    </div>
+    <label>PENDIENTES</label>
+    <div class ="container">
+    @foreach($pedidosPendientes as $pedido)
         <div class="row list-element__background">
-            <label>{{$pedido->created_at}}</label>-
-            @if($pedido->pagado == true)
-                <label>Pagado</label>
-            @else
-                <label>Pendiente</label>
-            @endif
+            <label>{{$pedido->created_at}}</label>
             <div class ="container">
                 @foreach ($lineas[$pedido->id] as $linea)
                     <div class="row list-element--border">

@@ -40,19 +40,19 @@ class orderController extends Controller
         Stripe::setApiKey(env('STRIPE_SECRET'));
         $token = $request->input('stripeToken');
         print_r(array(
-            "amount" => Cart::total(),
+            "amount" => round(Cart::total()*100),
             "currency" => "eur",
             "description" => "Order",
             "source" => $token,));
         $charge = \Stripe\Charge::create(array(
-            "amount" => Cart::total(),
+            "amount" => round(Cart::total()*100),
             "currency" => "eur",
             "description" => "Order",
             "source" => $token,
         ));
         $order->pagado = true;
-        $order->save();
-        return $charge;
+        if($order->save());
+        return redirect()->route('books')->with('Pedido Realizado correctamente.');
     }
     public function store(){
         $order = new Order();

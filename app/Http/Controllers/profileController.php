@@ -19,15 +19,22 @@ class profileController extends Controller
         foreach($Libros as $libro){
             $libros[$libro->id] = $libro->titulo;
         }
-        $pedidos = Order::where('fk_usuarios', $userid)->get();
+        $pedidosPagados = Order::where('fk_usuarios', $userid)->where('pagado', true)->get();
+        $pedidosPendientes = Order::where('fk_usuarios', $userid)->where('pagado', false)->get();
+
 
         $lineas = array();
-        foreach($pedidos as $o)
+        foreach($pedidosPagados as $o)
         {
             $lineas[$o->id]= Libros_pedidos::all()->where('fk_pedidos',$o->id);
         }
 
-        return view('/profile.content', ['seo_title'=>'Perfil', 'user'=>$user, 'pedidos'=>$pedidos,'lineas'=>$lineas, 'libros'=> $libros]);
+        foreach($pedidosPendientes as $o)
+        {
+            $lineas[$o->id]= Libros_pedidos::all()->where('fk_pedidos',$o->id);
+        }
+
+        return view('/profile.content', ['seo_title'=>'Perfil', 'user'=>$user, 'pedidosPagados'=>$pedidosPagados, 'pedidosPendientes'=>$pedidosPendientes,'lineas'=>$lineas, 'libros'=> $libros]);
     }
 
     public function update(Request $request, $userid)

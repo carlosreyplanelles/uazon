@@ -10,8 +10,8 @@
             </div>
 
         @endforeach
-            <div>Subtotal: round({{$subtotal}})</div>
-            <div>Total: round({{$total}})</div>
+            <div>Subtotal: {{$subtotal}}</div>
+            <div>Total: {{$total}}</div>
             <label for="card-element">
                 Credit or debit card
             </label>
