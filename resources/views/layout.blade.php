@@ -22,8 +22,14 @@
     <link rel="apple-touch-icon" href="{{ asset('/images/favicon180x180.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('/images/favicon152x152.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('/images/favicon167x167.png') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/review.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/list.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/navigation.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/detail.css') }}">
+    <link rel="stylesheet" href{{asset('assets/styles/commonHeader.css')}}
 
-    <!-- Open Graph -->
+<!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Uazon">
     <meta property="og:url" content="uazon.com">
@@ -33,12 +39,6 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpg">
-    <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/styles/review.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/styles/list.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/styles/navigation.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/styles/detail.css') }}">
-    <link rel="stylesheet" href{{asset('assets/styles/commonHeader.css')}}
 
 </head>
 <body>

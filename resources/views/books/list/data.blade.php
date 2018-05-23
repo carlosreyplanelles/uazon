@@ -11,7 +11,7 @@
                     <p>{{$book->isbn}}</p>
                     <p>{{$book->titulo}}</p>
                     <p>{{$book->precio}}</p>
-                    <div class="input-position-bottom" ><input type="submit"value="Add to Cart"></div>
+                    <div class="input-position-bottom" ><input class="btn btn--lg btn-primary" type="submit"value="Add to Cart"></div>
             </form>
         @endforeach
     </div>

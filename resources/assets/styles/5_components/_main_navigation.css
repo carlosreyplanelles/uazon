@@ -1,3 +1,13 @@
-.navigation__element--padding{
-    padding: auto
+.navigation{
+    background: var(--navigation-containers--background);
+}
+.navigation__list {
+
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__item {
+    display: inline-block;
+    margin-right: 2%;
 }
