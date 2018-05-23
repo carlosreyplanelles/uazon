@@ -93,7 +93,7 @@ class LoginController extends Controller
             } catch(\Exception $e){}
         }
         \Auth::login($user, true);
-        return redirect()->route('books')->with('Success logging in with Facebook');
+        return redirect()->route('books');
     }
 
 }
