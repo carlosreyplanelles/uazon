@@ -18,8 +18,9 @@ return [
     */
     'supportsCredentials' => false,
     'allowedOrigins' => ['*'],
+    'allowedOriginsPatterns' => [],
     'allowedHeaders' => ['*'],
-    'allowedMethods' => ['*'], // ex: ['GET', 'POST', 'PUT',  'DELETE']
-    'exposedHeaders' => ['*'],
+    'allowedMethods' => ['*'],
+    'exposedHeaders' => [],
     'maxAge' => 0,
 ];
